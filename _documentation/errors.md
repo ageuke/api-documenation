@@ -10,7 +10,7 @@ content_markdown: >-
   error information in the response body.
 
 
-  *Error Responses*
+  ***Error Responses***
 
 
   Error responses will be returned in JSON format with a specific format that
