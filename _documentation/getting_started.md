@@ -12,26 +12,6 @@ content_markdown: >-
   returns&nbsp;[JSON-encoded](http://www.json.org/){:
   target="_blank"}&nbsp;responses, and uses standard HTTP response codes,
   authentication, and verbs.
-
-
-  Proper Usage
-
-  {: .success}
-
-
-  Useful information and context
-
-  {: .info}
-
-
-  Warnings and Limitations
-
-  {: .warning}
-
-
-  Errors will occur
-
-  {: .error}
 left_code_blocks:
   - code_block:
     title:
