@@ -35,7 +35,11 @@ content_markdown: >-
   /sites endpoint with the following headers:
 
 
-  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6Ikp...
+  Authorization: Bearer&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  eyJhbGciOiJIUzI1NiIsInR5cCI6Ikp…
 
 
   ***Token expiration***
