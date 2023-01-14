@@ -19,27 +19,6 @@ content_markdown: >-
   error.
 
 
-  Example of error response:
-
-
-  \{
-
-
-  &nbsp; &nbsp; "error": \{
-
-
-  &nbsp; &nbsp; &nbsp; &nbsp; "code": "401",
-
-
-  &nbsp; &nbsp; &nbsp; &nbsp; "message": "Unauthorized"
-
-
-  &nbsp; &nbsp; \}
-
-
-  \}
-
-
   | Code | Name | Description |
 
   | --- | --- | --- |
