@@ -6,8 +6,8 @@ description: Retrieve a list of sites
 parameters:
   - name: account_oid
     content: The account_oid to filter the results by. This parameter is optional.
-  - name: score
-    content: The book's score between 0 and 5
+  - name: region_oid
+    content: The region_oid to filter the results by. This parameter is optional.
 content_markdown: |-
   The book will automatically be added to your reading list
   {: .success}
