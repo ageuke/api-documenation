@@ -1,5 +1,5 @@
 ---
-title: /data
+title: /device_data
 position_number: 1.1
 type: get
 description: |
