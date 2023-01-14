@@ -2,9 +2,7 @@
 title: /regions
 position_number: 1
 type: get
-description: >-
-  Retrieves a list of all regions that includes account_oid, region_disc,
-  region_info, region_name, region_oid and site_count.
+description: Retrieves a list of all regions assigned to sites within an account.
 parameters:
   - name: account_oid
     content: The account_oid to filter the results by. This parameter is optional.
