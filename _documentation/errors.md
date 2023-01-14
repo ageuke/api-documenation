@@ -31,10 +31,9 @@ content_markdown: >-
 left_code_blocks:
   - code_block: |-
       {
-          "error": {
-              "code": "401",
-              "message": "Unauthorized"
-          }
+        "detail": "403 Forbidden: You dont have access to the requested resource",
+        "status": 403,
+        "title": "Forbidden"
       }
     title: Example of error response
     language: json
