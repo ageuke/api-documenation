@@ -9,8 +9,8 @@ parameters:
   - name: account_oid
     content: The account_oid to filter the results by. This parameter is optional.
 content_markdown: >-
-  This call will return all regions for an account. If no regions are assigned
-  it will return one region labelled "None".
+  This call will return all regions for an account. If regions have not been
+  assigned it will return one region labelled "None".
 
   {: .info}
 
