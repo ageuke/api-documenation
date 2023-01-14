@@ -43,21 +43,7 @@ left_code_blocks:
     title: Curl
     language: bash
 right_code_blocks:
-  - code_block: |-
-      [
-        {
-          "id": 1,
-          "title": "The Hunger Games",
-          "score": 4.5,
-          "dateAdded": "12/12/2013"
-        },
-        {
-          "id": 1,
-          "title": "The Hunger Games",
-          "score": 4.7,
-          "dateAdded": "15/12/2013"
-        },
-      ]
-    title: Response
+  - code_block: "[\n        {\n    \t\"account_oid\": \"5c814c135b11884e70e8643c\",\n    \t\"region_desc\": \"Example Description 1\",\n    \t\"region_info\": \"Example Info 1\",\n\t    \"region_name\": \"Example Name 1\",\n\t    \"region_oid\": \"6g814c159doe884e70e8643c \",\n\t    \"site_count\": 100\n        },\n        {\n    \t\"account_oid\": \"5c814c135b11884e70e8643c\",\n    \t\"region_desc\": \"Example Description 2\",\n    \t\"region_info\": \"Example Info 2\",\n\t    \"region_name\": \"Example Name 2\",\n\t    \"region_oid\": \"6g814c159doe884e70e8643c \",\n\t    \"site_count\": 60\n        },\n        ...\n\n]"
+    title: Example Response
     language: json
 ---
