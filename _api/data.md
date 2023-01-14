@@ -43,12 +43,28 @@ content_markdown: >-
   data for the specified site
 
   {: .info}
+
+
+  dev\_type "F1" specifies an AS-20z controller
+
+  {: .info}
+
+
+  case\_type specifies the type of case. "Freezer" is a low temp case, "Cooler"
+  is a medium/normal temp case
+
+  {: .info}
+
+
+  If case\_temp is not returned, no case temp sensor is installed on that case
+
+  {: .info}
 left_code_blocks:
   - code_block: "curl -X 'GET' \\\r\n  'https://www.as20z.com:9900/api/v1.0/sites/YOUR_SITE_OID/sensor_data?start_timestamp=2022-10-10T10&end_timestamp=2022-10-10T11' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Authorization: Bearer YOUR_JWT_TOKEN'"
     title: Curl
     language: bash
 right_code_blocks:
-  - code_block: "[\n        {\n    \t\"_id\": \"5c814c135b11884e70e8643c\",\n    \t\"site_location\": \"Example Address 1\",\n    \t\"site_name\": \"Example Name 1\"\n        },\n        {\n    \t\"_id\": \"5c814c135b54584e70e8643c\",\n    \t\"site_location\": \"Example Address 2\",\n    \t\"site_name\": \"Example Name 2\"\n        },\n        ...\n\n]"
+  - code_block: "{\r\n    \"device_count\": 46,\r\n    \"devices\": [\r\n     \"case_type\": \"freezer\",\r\n        \"dev_type\": \"F1\",\r\n        \"device_data\": {\r\n          \"case_temp\": [\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:00:00-06:00\",\r\n              \"value\": 38.0\r\n            },\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:15:00-06:00\",\r\n              \"value\": 38.0\r\n            },\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:30:00-06:00\",\r\n              \"value\": 38.0\r\n            },\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:45:00-06:00\",\r\n              \"value\": 38.0\r\n            }\r\n          ],\r\n          \"dew_point\": [\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:00:00-06:00\",\r\n              \"value\": 34.0\r\n            },\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:15:00-06:00\",\r\n              \"value\": 34.0\r\n            },\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:30:00-06:00\",\r\n              \"value\": 34.0\r\n            },\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:45:00-06:00\",\r\n              \"value\": 33.0\r\n            }\r\n          ],\r\n          \"door_temp\": [\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:00:00-06:00\",\r\n              \"value\": 50.0\r\n            },\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:15:00-06:00\",\r\n              \"value\": 50.0\r\n            },\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:30:00-06:00\",\r\n              \"value\": 50.0\r\n            },\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:45:00-06:00\",\r\n              \"value\": 50.0\r\n            }\r\n          ],\r\n          \"htr_relay_on\": [\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:00:00-06:00\",\r\n              \"value\": 0.0\r\n            },\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:15:00-06:00\",\r\n              \"value\": 0.0\r\n            },\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:30:00-06:00\",\r\n              \"value\": 0.0\r\n            },\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:45:00-06:00\",\r\n              \"value\": 0.0\r\n            }\r\n          ],\r\n          \"humidity\": [\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:00:00-06:00\",\r\n              \"value\": 40.0\r\n            },\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:15:00-06:00\",\r\n              \"value\": 40.0\r\n            },\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:30:00-06:00\",\r\n              \"value\": 40.0\r\n            },\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:45:00-06:00\",\r\n              \"value\": 40.0\r\n            }\r\n          ],\r\n          \"room_temp\": [\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:00:00-06:00\",\r\n              \"value\": 58.0\r\n            },\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:15:00-06:00\",\r\n              \"value\": 58.0\r\n            },\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:30:00-06:00\",\r\n              \"value\": 58.0\r\n            },\r\n            {\r\n              \"timestamp\": \"2022-10-10T10:45:00-06:00\",\r\n              \"value\": 58.0\r\n            }\r\n          ]\r\n        },\r\n        \"loc_uuid\": \"EXAMPLE loc_uuid\",\r\n        \"location\": \"Physical Location of Device\",\r\n        \"mac_addr\": \"DEVICE MAC ID\"\r\n      },\r\n          ...\r\n    }\r\n  ],\r\n  \"end_date\": \"2022-10-10T11:00:00-06:00\",\r\n  \"site_location\": \"Example Site Address\",\r\n  \"site_name\": \"Example Site Name\",\r\n  \"site_oid\": \"YOUR_SITE_OID\",\r\n  \"site_timezone\": \"MST7MDT\",\r\n  \"start_date\": \"2022-10-10T10:00:00-06:00\"  \r\n}"
     title: Response
     language: json
 ---
