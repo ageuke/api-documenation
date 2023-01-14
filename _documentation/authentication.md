@@ -10,7 +10,7 @@ content_markdown: >-
   prefixed with Bearer followed by a space.
 
 
-  *Obtaining a JWT*
+  ***Obtaining a JWT***
 
 
   To obtain a JWT, go to [www.AS20z.com](http://www.AS20z.com) and login to user
@@ -24,7 +24,7 @@ content_markdown: >-
   contact ControlTec directly to have an account or JWT created.
 
 
-  *Using the JWT*
+  ***Using the JWT***
 
 
   Once you have obtained a JWT, you should include it in the Authorization
@@ -39,7 +39,7 @@ content_markdown: >-
   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV\_adQssw5c
 
 
-  *Token expiration*
+  ***Token expiration***
 
 
   JWT tokens are valid for a limited time. If a token expires, the API will
