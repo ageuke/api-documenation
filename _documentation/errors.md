@@ -49,16 +49,15 @@ content_markdown: >-
   | 400 | Bad Request | We could not process that action |
 
   | 403 | Forbidden | You do not have proper access for this request |
-
-
-  All errors will return JSON in the following format:
 left_code_blocks:
   - code_block: |-
       {
-        "error": true,
-        "message": "error message here"
+          "error": {
+              "code": "401",
+              "message": "Unauthorized"
+          }
       }
-    title: Response
+    title: Example of error response
     language: json
 right_code_blocks:
   - code_block:
