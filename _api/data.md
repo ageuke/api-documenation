@@ -20,8 +20,8 @@ parameters:
   - name: end_timestamp
     content: String. Desired end time in ISO date format.
 content_markdown: >-
-  Receive timestamped data for every device in the specified. The request will
-  return the following data points for each individual device/controller:
+  Receive timestamped data for every device in the specified site. The request
+  will return the following data points for each individual device/controller:
 
 
   * case\_temp: Internal Case Temperature (Optional Sensor)
