@@ -14,22 +14,22 @@ content_markdown: >-
   authentication, and verbs.
 
 
-  You'll succeed if you do this.
+  Proper Usage
 
   {: .success}
 
 
-  Here's some useful information.
+  Useful information and context
 
   {: .info}
 
 
-  Something may not happen if you try and do this.
+  Warnings and Limitations
 
   {: .warning}
 
 
-  Something bad will happen if you do this.
+  Errors will occur
 
   {: .error}
 left_code_blocks:
