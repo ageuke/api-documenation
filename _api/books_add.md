@@ -1,11 +1,11 @@
 ---
-title: /books
+title: /sites
 position_number: 1.1
-type: post
-description: Create Book
+type: get
+description: Retrieve a list of sites
 parameters:
-  - name: title
-    content: The title for the book
+  - name: account_oid
+    content: The account_oid to filter the results by. This parameter is optional.
   - name: score
     content: The book's score between 0 and 5
 content_markdown: |-
@@ -42,5 +42,3 @@ right_code_blocks:
     title: Error
     language: json
 ---
-
-
