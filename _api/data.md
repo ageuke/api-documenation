@@ -59,6 +59,11 @@ content_markdown: >-
   If case\_temp is not returned, no case temp sensor is installed on that case
 
   {: .info}
+
+
+  Data can only be pulled for time periods of 24 hours or less
+
+  {: .warning}
 left_code_blocks:
   - code_block: "curl -X 'GET' \\\r\n  'https://www.as20z.com:9900/api/v1.0/sites/YOUR_SITE_OID/sensor_data?start_timestamp=2022-10-10T10&end_timestamp=2022-10-10T11' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Authorization: Bearer YOUR_JWT_TOKEN'"
     title: Curl
