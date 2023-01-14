@@ -1,27 +1,37 @@
 ---
-title: Getting Started
+title: API Reference
 position_number: 1
 parameters:
   - name:
     content:
-content_markdown: |-
-  Welcome to our API.
+content_markdown: >-
+  ControlTec’s API is organized around REST. Our API has predictable
+  resource-oriented URLs,
+  accepts&nbsp;[form-encoded](https://en.wikipedia.org/wiki/POST_&#40;HTTP&#41;#Use_for_submitting_web_forms){:
+  target="_blank"}&nbsp;request bodies,
+  returns&nbsp;[JSON-encoded](http://www.json.org/){:
+  target="_blank"}&nbsp;responses, and uses standard HTTP response codes,
+  authentication, and verbs.
 
-  This API document is designed for those interested in developing for our platform.
-
-  This API is still under development and will evolve.
 
   You'll succeed if you do this.
-  {: .success }
+
+  {: .success}
+
 
   Here's some useful information.
-  {: .info }
+
+  {: .info}
+
 
   Something may not happen if you try and do this.
-  {: .warning }
+
+  {: .warning}
+
 
   Something bad will happen if you do this.
-  {: .error }
+
+  {: .error}
 left_code_blocks:
   - code_block:
     title:
