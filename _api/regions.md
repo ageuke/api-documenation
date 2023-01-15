@@ -13,33 +13,9 @@ content_markdown: >-
   {: .info}
 
 
-  Lists all the photos you have access to. You can paginate by using the
-  parameters listed above.
+  &nbsp;
 left_code_blocks:
-  - code_block: >-
-      $.get("http://api.myapp.com/books/", { "token": "YOUR_APP_KEY"},
-      function(data) {
-        alert(data);
-      });
-    title: jQuery
-    language: javascript
-  - code_block: |-
-      r = requests.get("http://api.myapp.com/books/", token="YOUR_APP_KEY")
-      print r.text
-    title: Python
-    language: python
-  - code_block: >-
-      var request = require("request");
-
-      request("http://api.myapp.com/books?token=YOUR_APP_KEY", function (error,
-      response, body) {
-
-      if (!error && response.statusCode == 200) {
-        console.log(body);
-      }
-    title: Node.js
-    language: javascript
-  - code_block: curl http://sampleapi.readme.com/orders?key=YOUR_APP_KEY
+  - code_block: "curl -X 'GET' \\\r\n  'https://www.as20z.com:9900/api/v1.0/regions?account_oid=YOUR ACCOUNT_OID' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Authorization: Bearer YOUR JWT TOKEN'"
     title: Curl
     language: bash
 right_code_blocks:
