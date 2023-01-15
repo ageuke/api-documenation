@@ -18,7 +18,7 @@ content_markdown: >-
   doors
 
   * door\_temp: temperature sensor typically mounted to mullion or bottom rail
-  of case
+  of case (also called frame temperature)
 
   * humidity: humidity directly outside of case
 
