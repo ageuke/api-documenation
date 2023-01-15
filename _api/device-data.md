@@ -24,13 +24,13 @@ content_markdown: >-
   will return the following data points for each individual device/controller:
 
 
-  * case\_temp: Internal Case Temperature (Optional Sensor)
+  * case\_temp: internal case temperature (optional sensor)
 
-  * dew\_point: dew point reading from sensor typically mounted directly above
-  doors
+  * dew\_point: dew point reading from humidity sensor, typically mounted
+  directly above doors
 
-  * door\_temp: temperature sensor typically mounted to mullion or bottom rail
-  of case
+  * door\_temp: temperature sensor; typically mounted to mullion or bottom rail
+  of case (also called frame temperature)
 
   * humidity: humidity directly outside of case
 
