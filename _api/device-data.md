@@ -65,7 +65,11 @@ content_markdown: >-
 
   {: .warning}
 left_code_blocks:
-  - code_block: "curl -X 'GET' \\\r\n  'https://www.as20z.com:9900/api/v1.0/sites/YOUR_SITE_OID/sensor_data?start_timestamp=2022-10-10T10&end_timestamp=2022-10-10T11' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Authorization: Bearer YOUR_JWT_TOKEN'"
+  - code_block: |-
+      curl -X 'GET' \
+        'https://www.as20z.com:9900/api/v1.0/sites/YOUR_SITE_OID/device_data?start_timestamp=2022-10-10T10&end_timestamp=2022-10-10T11' \
+        -H 'accept: application/json' \
+        -H 'Authorization: Bearer YOUR_JWT_TOKEN'
     title: Curl
     language: bash
 right_code_blocks:
