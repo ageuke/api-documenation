@@ -46,7 +46,7 @@ content_markdown: >-
   new JWT, repeat the steps above and create a new token.
 
 
-  Nothing will work unless you include this API key
+  Nothing will work unless you include this JWT
 
   {: .error}
 left_code_blocks:
