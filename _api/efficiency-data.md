@@ -70,7 +70,7 @@ content_markdown: >-
 left_code_blocks:
   - code_block: |-
       curl -X 'GET' \
-        'https://www.as20z.com:9900/api/v1.0/sites/YOUR_SITE_OID/efficiency_data?start_timestamp=2022-10-10&end_timestamp=2022-10-11' \
+        'https://www.as20z.com:9900/api/v1.0/sites/YOUR_SITE_OID/efficiency_data?start_timestamp=2020-07-07' \
         -H 'accept: application/json' \
         -H 'Authorization: Bearer YOUR_JWT_TOKEN'
     title: Curl
