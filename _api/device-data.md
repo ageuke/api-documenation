@@ -1,6 +1,6 @@
 ---
 title: /device_data
-position_number: 1.1
+position_number: 1.2
 type: get
 description: |
   Retrieve all data by device for a specified site and timeframe

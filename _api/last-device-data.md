@@ -1,6 +1,6 @@
 ---
 title: /last_device_data
-position_number: 1.1
+position_number: 1.3
 type: get
 description: |
   Retrieve the last reading for every device of the specified site 

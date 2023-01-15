@@ -1,6 +1,6 @@
 ---
 title: /sites
-position_number: 1.12
+position_number: 1.1
 type: get
 description: Retrieve a list of sites
 parameters:
