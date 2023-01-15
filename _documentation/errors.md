@@ -28,6 +28,11 @@ content_markdown: >-
   | 400 | Bad Request | We could not process that action |
 
   | 403 | Forbidden | You do not have proper access for this request |
+
+  | 500 | Internal Server Error | Cannot parse argument of type None |
+
+
+  &nbsp;
 left_code_blocks:
   - code_block: |-
       {
