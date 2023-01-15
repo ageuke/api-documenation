@@ -21,27 +21,39 @@ parameters:
   - name: end_timestamp
     content: String. Desired end time in ISO date format.
 content_markdown: >-
-  Receive timestamped data for every device in the specified site. The request
-  will return the following data points for each individual device/controller:
+  Receive timestamped efficiency and savings data for every device in the
+  specified site and the total site efficiency and savings. The request will
+  return the following efficiency data points for each individual
+  device/controller plus the total site efficiency for the specified timeframe:
 
 
-  * case\_temp: Internal Case Temperature (Optional Sensor)
+  * time\_off: the amount of time (seconds) the heaters were off
 
-  * dew\_point: dew point reading from sensor typically mounted directly above
-  doors
+  * time\_on: the amount of time (seconds) the heaters were on
 
-  * door\_temp: temperature sensor typically mounted to mullion or bottom rail
-  of case
+  * efficiency: the % of time heaters were turned off
 
-  * humidity: humidity directly outside of case
+  * kwh\_saved: the number of kwh saved
 
   * room\_temp: temperature directly outside of case
 
-  * htr\_relay\_on: relay state for AS-20z controller
+  * savings: the dollar amount saved
 
 
-  If neither timeframe parameter is included, it will return the last hour of
-  data for the specified site
+  If neither timeframe parameter is included, you will receive a 500 error. One
+  timeframe parameter must be specified
+
+  {: .error}
+
+
+  If only start\_timestamp is specified, 1 day of data will be returned starting
+  at the specified time
+
+  {: .info}
+
+
+  If only end\_timestamp is specified, 1 day of data prior to the specified time
+  will be returned
 
   {: .info}
 
@@ -55,155 +67,16 @@ content_markdown: >-
   is a medium/normal temp case
 
   {: .info}
-
-
-  If case\_temp is not returned, no case temp sensor is installed on that case
-
-  {: .info}
-
-
-  Data can only be pulled for time periods of 24 hours or less
-
-  {: .warning}
 left_code_blocks:
   - code_block: |-
       curl -X 'GET' \
-        'https://www.as20z.com:9900/api/v1.0/sites/YOUR_SITE_OID/device_data?start_timestamp=2022-10-10T10&end_timestamp=2022-10-10T11' \
+        'https://www.as20z.com:9900/api/v1.0/sites/YOUR_SITE_OID/efficiency_data?start_timestamp=2022-10-10&end_timestamp=2022-10-11' \
         -H 'accept: application/json' \
         -H 'Authorization: Bearer YOUR_JWT_TOKEN'
     title: Curl
     language: bash
 right_code_blocks:
-  - code_block: |-
-      {
-          "device_count": 46,
-          "devices": [
-           "case_type": "freezer",
-              "dev_type": "F1",
-              "device_data": {
-                "case_temp": [
-                  {
-                    "timestamp": "2022-10-10T10:00:00-06:00",
-                    "value": 38.0
-                  },
-                  {
-                    "timestamp": "2022-10-10T10:15:00-06:00",
-                    "value": 38.0
-                  },
-                  {
-                    "timestamp": "2022-10-10T10:30:00-06:00",
-                    "value": 38.0
-                  },
-                  {
-                    "timestamp": "2022-10-10T10:45:00-06:00",
-                    "value": 38.0
-                  }
-                ],
-                "dew_point": [
-                  {
-                    "timestamp": "2022-10-10T10:00:00-06:00",
-                    "value": 34.0
-                  },
-                  {
-                    "timestamp": "2022-10-10T10:15:00-06:00",
-                    "value": 34.0
-                  },
-                  {
-                    "timestamp": "2022-10-10T10:30:00-06:00",
-                    "value": 34.0
-                  },
-                  {
-                    "timestamp": "2022-10-10T10:45:00-06:00",
-                    "value": 33.0
-                  }
-                ],
-                "door_temp": [
-                  {
-                    "timestamp": "2022-10-10T10:00:00-06:00",
-                    "value": 50.0
-                  },
-                  {
-                    "timestamp": "2022-10-10T10:15:00-06:00",
-                    "value": 50.0
-                  },
-                  {
-                    "timestamp": "2022-10-10T10:30:00-06:00",
-                    "value": 50.0
-                  },
-                  {
-                    "timestamp": "2022-10-10T10:45:00-06:00",
-                    "value": 50.0
-                  }
-                ],
-                "htr_relay_on": [
-                  {
-                    "timestamp": "2022-10-10T10:00:00-06:00",
-                    "value": 0.3
-                  },
-                  {
-                    "timestamp": "2022-10-10T10:15:00-06:00",
-                    "value": 0.5
-                  },
-                  {
-                    "timestamp": "2022-10-10T10:30:00-06:00",
-                    "value": 0.4
-                  },
-                  {
-                    "timestamp": "2022-10-10T10:45:00-06:00",
-                    "value": 0.2
-                  }
-                ],
-                "humidity": [
-                  {
-                    "timestamp": "2022-10-10T10:00:00-06:00",
-                    "value": 40.0
-                  },
-                  {
-                    "timestamp": "2022-10-10T10:15:00-06:00",
-                    "value": 40.0
-                  },
-                  {
-                    "timestamp": "2022-10-10T10:30:00-06:00",
-                    "value": 40.0
-                  },
-                  {
-                    "timestamp": "2022-10-10T10:45:00-06:00",
-                    "value": 40.0
-                  }
-                ],
-                "room_temp": [
-                  {
-                    "timestamp": "2022-10-10T10:00:00-06:00",
-                    "value": 58.0
-                  },
-                  {
-                    "timestamp": "2022-10-10T10:15:00-06:00",
-                    "value": 58.0
-                  },
-                  {
-                    "timestamp": "2022-10-10T10:30:00-06:00",
-                    "value": 58.0
-                  },
-                  {
-                    "timestamp": "2022-10-10T10:45:00-06:00",
-                    "value": 58.0
-                  }
-                ]
-              },
-              "loc_uuid": "EXAMPLE loc_uuid",
-              "location": "Physical Location of Device",
-              "mac_addr": "DEVICE MAC ID"
-            },
-                ...
-          }
-        ],
-        "end_date": "2022-10-10T11:00:00-06:00",
-        "site_location": "Example Site Address",
-        "site_name": "Example Site Name",
-        "site_oid": "YOUR_SITE_OID",
-        "site_timezone": "MST7MDT",
-        "start_date": "2022-10-10T10:00:00-06:00"  
-      }
+  - code_block: "{\r\n  \"account_name\": \"EXAMPLE ACCOUNT NAME\",\r\n  \"devices\": [\r\n    {\r\n      \"case_type\": \"freezer\",\r\n      \"dev_type\": \"F1\",\r\n      \"door_count\": 5,\r\n      \"door_rating\": 1.25,\r\n      \"efficiency\": 0.512,\r\n      \"time_off\": 44208.8,\r\n      \"time_on\": 42191.2,\r\n      \"kwh_saved\": 11.208772833333335,\r\n      \"loc_uuid\": \"03b487e0-0b47-5cb5-b147-54aec91e2746\",\r\n      \"location\": \"EXAMPLE LOCATION 1\",\r\n      \"mac_addr\": \"00158D0000997WE5\",\r\n      \"off_time\": 38928.3,\r\n      \"savings\": 1.23\r\n    },\r\n    {\r\n      \"case_type\": \"freezer\",\r\n      \"dev_type\": \"F1\",\r\n      \"door_count\": 3,\r\n      \"door_rating\": 1.25,\r\n      \"efficiency\": 0.43,\r\n      \"time_off\": 37141.9,\r\n      \"time_on\": 49258.1,\r\n      \"kwh_saved\": 5.650211537500001,\r\n      \"loc_uuid\": \"0e48er8f-c7d5-5c43-9058-0f96130d59c5\",\r\n      \"location\": \"EXAMPLE LOCATION 2\",\r\n      \"mac_addr\": \"00158D0000999V8A\",\r\n      \"savings\": 0.62\r\n    },\r\n    ...\r\n      }\r\n    ]\r\n  \"end_date\": \"2020-07-08T00:00:00+00:00\",\r\n  \"time_on\": 847644.7,\r\n  \"generated_date\": \"2021-01-15T17:52:25.741600+00:00\",\r\n  \"site\": {\r\n    \"efficiency\": 0.5540589751683502,\r\n    \"time_off\": 1053155.3,\r\n    \"kwh_saved\": 290.0800957866667,\r\n    \"period_seconds\": 86400,\r\n    \"savings\": 31.9\r\n  },\r\n  \"site_elec_cost\": 0.11,\r\n  \"site_location\": \"EXAMPLE SITE ADDRESS\",\r\n  \"site_name\": \"EXAMPLE SITE NAME\",\r\n  \"site_oid\": \"5e5d25b05b11884r80e8648a\",\r\n  \"start_date\": \"2020-07-07T00:00:00+00:00\"\r\n}"
     title: Example Response
     language: json
 ---
