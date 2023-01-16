@@ -1,12 +1,12 @@
 # ----
 # Site
 
-title: Aviator
-description: Jekyll template for API documentation.
-url: https://example.com
+title: ControlTec API Documentation
+description: API Documentation for ControlTec LLC
+url: https://www.controltecas20.com
 google_analytics_key:
 permalink: pretty
-baseurl:
+baseurl: api-documentation
 
 # -----
 # Build
