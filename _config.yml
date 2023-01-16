@@ -6,7 +6,7 @@ description: API Documentation for ControlTec LLC
 url: https://www.controltecas20.com
 google_analytics_key:
 permalink: pretty
-baseurl: api-documentation
+baseurl: 
 
 # -----
 # Build
